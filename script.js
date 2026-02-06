@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
            // 这里简单处理，依赖 CSS transition
         }
         observer.observe(el);
+    });
+
     // Lightbox Logic
     const lightbox = document.getElementById('lightbox');
     if (lightbox) {

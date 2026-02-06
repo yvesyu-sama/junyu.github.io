@@ -19,17 +19,19 @@
         </a>
         <nav>
             <ul>
-                <li><a href="index.html">Work</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html#works">My Works</a></li>
+                <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="detail-main">
-        <div class="container">
-            <h1 class="page-title">同款对比</h1>
-        </div>
+        <!-- Title Banner -->
+        <section class="project-title-banner">
+            <div class="container">
+                <h1 class="page-title">同款对比</h1>
+            </div>
+        </section>
 
         <!-- 1. 背景 -->
         <section class="detail-section container">
@@ -176,7 +178,15 @@
         <!-- 5. 最终成果 -->
         <section class="detail-section container">
             <h2 class="section-title">最终成果</h2>
-            <img src="images/p1-final-result.png" alt="最终成果" class="detail-image">
+            <div class="final-result-container">
+                <img src="images/p1-final-result.png" alt="最终成果" class="detail-image no-bottom-radius">
+                <div class="result-stats-bar">
+                    <span class="stats-label">准确率：</span>
+                    <span class="stats-value-old">79.1%</span>
+                    <span class="stats-arrow">→</span>
+                    <span class="stats-value-new">86.7%</span>
+                </div>
+            </div>
         </section>
 
     </main>
