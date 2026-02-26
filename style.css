@@ -402,7 +402,7 @@ nav a:hover, nav a.active {
 .section-title {
     font-size: 1.75rem;
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 24px; /* Reduced from 40px */
     color: var(--text-primary);
     position: relative;
     padding-left: 20px;
@@ -426,7 +426,7 @@ nav a:hover, nav a.active {
 .subsection-title {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 24px;
+    margin-bottom: 12px; /* Reduced from 24px */
     color: var(--text-primary);
 }
 
@@ -456,7 +456,14 @@ nav a:hover, nav a.active {
     border-radius: 8px;
     display: block;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    background-color: #f0f2f5; /* Placeholder background before load */
+    /* background-color: #f0f2f5; Removed placeholder background */
+    
+    /* Enhanced clarity properties */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transform: translateZ(0);
+    filter: contrast(1.02) saturate(1.02);
+    backface-visibility: hidden;
 }
 
 .full-width-placeholder {
@@ -491,7 +498,12 @@ nav a:hover, nav a.active {
 
 /* Full Width Banners */
 .full-width-banner {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     padding: 60px 0;
     margin-bottom: 80px;
 }
@@ -710,4 +722,118 @@ nav a:hover, nav a.active {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+}
+
+/* --- Reconstructed Styles from Recent Session --- */
+
+/* Project Specific Banner */
+.merchant-limit-banner {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); /* Blue-400 to Blue-500 */
+    position: relative;
+    overflow: hidden;
+}
+
+.flow-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+/* Spacing Utilities */
+.mt-loose {
+    margin-top: 40px !important;
+}
+
+.mt-xl {
+    margin-top: 80px !important;
+}
+
+.mb-tight {
+    margin-bottom: 4px !important;
+}
+
+.mt-tight {
+    margin-top: 8px !important;
+}
+
+/* Width & Alignment Utilities */
+.width-60 {
+    max-width: 60% !important;
+}
+
+.width-80 {
+    max-width: 80% !important;
+}
+
+.auto-width {
+    width: auto !important;
+    max-width: 100%;
+    margin: 0 auto; /* Center by default */
+}
+
+.align-left {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* Full Width Sections & Backgrounds */
+.full-width-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 60px 0;
+    margin-bottom: 80px;
+}
+
+.bg-light-purple {
+    background-color: #faf5ff;
+}
+
+.bg-light-blue {
+    background-color: #f6faff;
+}
+
+/* Typography Colors */
+.text-blue {
+    color: #3b82f6;
+    font-weight: 700;
+}
+
+.text-orange {
+    color: #f97316;
+    font-weight: 700;
+}
+
+.text-purple-bold {
+    color: #7c3aed; /* Purple 600 */
+    font-weight: 700;
+}
+
+.summary-text-bold {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+
+.remark-box {
+    background-color: #f8fafc;
+    border-left: 4px solid #94a3b8;
+    padding: 16px;
+    margin: 16px 0;
+    color: #64748b;
+}
+
+.remark-text {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-top: 8px;
+    font-style: italic;
 }

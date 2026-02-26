@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商家端解限流 - Project Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo-y.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="header-inner container">
+            <a href="index.html" class="brand-group">
+                <div class="logo-y">
+                    <img src="images/logo-y.png" alt="Y Logo" class="logo-img">
+                </div>
+                <span class="designer-name">JUN YU</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html#works" class="nav-link">My Works</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="detail-main">
+        <!-- Title Banner -->
+        <section class="project-title-banner merchant-limit-banner">
+            <div class="flow-background">
+                <svg width="100%" height="100%" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="rgba(255, 237, 213, 0.4)" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                    <path fill="rgba(255, 237, 213, 0.3)" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,106.7C672,117,768,171,864,197.3C960,224,1056,224,1152,213.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <h1 class="page-title">商家端解限流</h1>
+            </div>
+        </section>
+
+        <!-- 1. 背景介绍 -->
+        <section class="detail-section container">
+            <h2 class="section-title">背景介绍</h2>
+            
+            <div class="content-block">
+                <h3 class="subsection-title">为什么需要商家调节供价（供货价格）？</h3>
+                <img src="images/ml-01-background-why.png" alt="为什么需要商家调节供价" class="detail-image auto-width">
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">我们如何触达商家？</h3>
+                <img src="images/ml-02-background-reach.png" alt="我们如何触达商家" class="detail-image">
+            </div>
+        </section>
+
+        <!-- 2. 用户流程 -->
+        <section class="full-width-section bg-light-blue">
+            <div class="container">
+                <h2 class="section-title">用户流程</h2>
+                <img src="images/ml-03-user-flow.png" alt="用户流程" class="detail-image auto-width">
+            </div>
+        </section>
+
+        <!-- 3. 主要痛点 -->
+        <section class="detail-section container">
+            <h2 class="section-title">主要痛点</h2>
+            
+            <div class="content-block">
+                <h3 class="subsection-title">1. 每个商品的操作链路都较长，商家决策成本较高，影响最终的降供率</h3>
+                <p class="body-text mb-tight">
+                    思考：商家如何平衡<span class="text-blue">「收益 (曝光)」</span>和<span class="text-orange">「损失（降供幅度）」</span>，是否存在侧重？
+                </p>
+                <div class="remark-box mt-tight">
+                    <p>从争取收益出发：根据要解除限流的站点决定降供幅度</p>
+                    <p>从减小损失出发：存在价格底线，根据最低降供幅度决定解除限流的站点</p>
+                </div>
+                <p class="body-text mb-tight">
+                    快速测试：两个方向设计各自设计了原型图，交由招商和产品调研
+                </p>
+                <p class="body-text text-purple-bold">
+                    结论：商家反馈偏向以争取「收益 」为主，减小「损失」为辅
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">2. 线上的调价模式是以「商品*站点」为颗粒度展示，需要操作的数据量太多，打击商家操作意愿</h3>
+                <img src="images/ml-04-painpoint-mode.png" alt="线上的调价模式" class="detail-image auto-width align-left width-80">
+                <p class="remark-text">
+                    *尽管支持批量操作，但仍需要商家浏览、判断、勾选，无法减少决策时间
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h3 class="subsection-title">3. 目前商家端限流信息的曝光有限</h3>
+                <p class="body-text">
+                    商家每天需要处理上品、合规、物流、报名等多项事务，分摊到解限流的精力有限
+                </p>
+            </div>
+        </section>
+
+        <!-- 4. 针对策略 -->
+        <section class="full-width-section bg-light-purple">
+            <div class="container">
+                <h2 class="section-title">针对策略</h2>
+                
+                <div class="content-block">
+                    <h3 class="subsection-title">1. 将单个商品下所有站点限流情况合并展示，统一处理</h3>
+                    <p class="body-text">默认解除所有站点的限流，支持修改</p>
+                </div>
+
+                <div class="content-block">
+                    <h3 class="subsection-title">2. 用「选择题」取代「填空题」</h3>
+                    <p class="body-text">
+                        将默认的配置简化为2-3个核心选项，便于商家快速判断和选择；在此基础上支持自定义调整等次要复杂操作
+                    </p>
+                    <img src="images/ml-05-strategy-choices.png" alt="简化配置为核心选项" class="detail-image auto-width align-left width-60">
+                </div>
+
+                <div class="content-block">
+                    <h3 class="subsection-title">3. 商家使用路径上增加触点，提升积极性</h3>
+                    <p class="body-text">
+                        招商会在A端后台配置好可解限流的商品并发送链接，帮助商家快速导航至「调价管理(高价商品tab)」
+                    </p>
+                    <img src="images/ml-06-strategy-touchpoint-backend.png" alt="商家使用路径触点1" class="detail-image auto-width align-left">
+                    <p class="body-text mt-xl">
+                        首页弹窗新增「稍后处理」按钮，支持添加至待办；减少商家的心里负担
+                    </p>
+                    <img src="images/ml-07-strategy-touchpoint-popup.png" alt="商家使用路径触点2" class="detail-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 成果示意 -->
+        <section class="detail-section container">
+            <h2 class="section-title">成果示意</h2>
+            <div class="stack-col">
+                <img src="images/ml-08-result-1.png" alt="成果示意1" class="detail-image">
+            </div>
+        </section>
+
+        <!-- Image 9: Full Width Black Strip -->
+        <section class="full-width-banner black-banner image-strip-banner">
+            <div class="container">
+                <img src="images/ml-09-result-2.png" alt="成果示意2" class="detail-image">
+            </div>
+        </section>
+
+        <section class="detail-section container">
+            <div class="stack-col">
+                <img src="images/ml-10-result-3.png" alt="成果示意3" class="detail-image">
+            </div>
+        </section>
+
+        <!-- 6. 试错复盘 -->
+        <section class="detail-section container">
+            <h2 class="section-title">试错复盘</h2>
+            <img src="images/ml-11-review.png" alt="试错复盘" class="detail-image auto-width align-left">
+        </section>
+
+        <!-- 7. 总结 -->
+        <section class="full-width-banner black-banner summary-banner">
+            <div class="container">
+                <p class="summary-text-bold">
+                    总结：以解决<span class="text-blue">主要矛盾</span>为核心，从“为什么要做”到“为什么不做”
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer container">
+        <div class="footer-content">
+            <p>&copy; 2026 JUN YU. Designed with AI assistance.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
