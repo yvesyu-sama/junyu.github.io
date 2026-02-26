@@ -207,11 +207,11 @@ nav a:hover, nav a.active {
 }
 
 .section-header {
-    margin-bottom: 60px;
+    margin-bottom: 32px;
 }
 
 .section-label {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text-secondary);
