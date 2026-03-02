@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const lightboxImg = document.getElementById('lightbox-img');
         const closeBtn = document.querySelector('.lightbox-close');
         
-        // Add click event to all detail images
-        const images = document.querySelectorAll('.detail-image');
+        // Add click event to all detail images and content images
+        const images = document.querySelectorAll('.detail-image, .content-img');
         images.forEach(img => {
             img.addEventListener('click', () => {
                 lightboxImg.src = img.src;

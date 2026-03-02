@@ -592,6 +592,16 @@ nav a:hover, nav a.active {
     color: var(--accent-color);
 }
 
+/* Full Width Strip */
+.full-width-strip {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.bg-light-gray {
+    background-color: #f9fafb; /* Lighter gray */
+}
+
 /* Compare Labels */
 .compare-item {
     position: relative;
@@ -724,11 +734,83 @@ nav a:hover, nav a.active {
     }
 }
 
-/* --- Reconstructed Styles from Recent Session --- */
+/* Reconstructed Styles from Recent Session */
+
+/* Custom Number Badge for KOL Project */
+.number-badge-blue {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    background-color: #e0f2fe; /* Light blue 100 */
+    color: #0284c7; /* Blue 600 */
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-right: 12px;
+    flex-shrink: 0; /* Prevent shrinking if text is long */
+}
+
+.list-item-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.placeholder-box {
+    width: 100%;
+    height: 300px; /* Default height */
+    background-color: #FFF9C4; /* Pale yellow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9ca3af;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    margin: 24px 0;
+    border: 2px dashed #e2e8f0;
+}
+
+/* Content Images - Responsive & Centered */
+.content-img {
+    display: block;
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    margin: 32px auto; /* Center horizontally with vertical spacing */
+    border-radius: 8px;
+    box-shadow: none;
+    cursor: zoom-in; /* Indicate click to zoom */
+    transition: transform 0.2s;
+}
+
+.content-img:hover {
+    transform: scale(1.01);
+}
+
+.width-80-left {
+    max-width: 80% !important;
+    margin-left: auto !important; /* Center align */
+    margin-right: auto !important; /* Center align */
+}
+
+.highlight-bracket {
+    font-weight: 700;
+    color: var(--text-primary);
+}
 
 /* Project Specific Banner */
 .merchant-limit-banner {
     background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); /* Blue-400 to Blue-500 */
+    position: relative;
+    overflow: hidden;
+}
+
+.kol-banner {
+    background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%); /* Orange-400 to Orange-600 */
     position: relative;
     overflow: hidden;
 }

@@ -1,0 +1,15 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Orange Gradient Background -->
+    <rect width="400" height="300" fill="url(#bg-gradient)"/>
+    
+    <!-- Abstract Flat Characters Group Removed -->
+
+
+    <!-- Definitions -->
+    <defs>
+        <linearGradient id="bg-gradient" x1="0" y1="0" x2="400" y2="300" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#FFF7ED"/> <!-- Very light orange -->
+            <stop offset="100%" stop-color="#FDBA74"/> <!-- Orange-300 -->
+        </linearGradient>
+    </defs>
+</svg>
