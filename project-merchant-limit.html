@@ -18,7 +18,7 @@
                 <div class="logo-y">
                     <img src="images/logo-y.png" alt="Y Logo" class="logo-img">
                 </div>
-                <span class="designer-name">JUN YU</span>
+                <span class="designer-name">Jun Yu</span>
             </a>
             <nav class="main-nav">
                 <a href="index.html#works" class="nav-link">My Works</a>
@@ -29,27 +29,51 @@
 
     <main class="detail-main">
         <!-- Title Banner -->
-        <section class="project-title-banner merchant-limit-banner">
+        <section class="merchant-limit-banner">
             <div class="flow-background">
+                <!-- Using a similar warm SVG or just the gradient. Let's keep the existing flow SVG but change fill colors to match warm theme -->
                 <svg width="100%" height="100%" viewBox="0 0 1440 320" preserveAspectRatio="none">
-                    <path fill="rgba(255, 237, 213, 0.4)" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                    <path fill="rgba(255, 237, 213, 0.3)" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,106.7C672,117,768,171,864,197.3C960,224,1056,224,1152,213.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                    <path fill="rgba(255, 255, 255, 0.2)" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                    <path fill="rgba(255, 255, 255, 0.1)" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,106.7C672,117,768,171,864,197.3C960,224,1056,224,1152,213.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                 </svg>
             </div>
             <div class="container" style="position: relative; z-index: 2;">
                 <h1 class="page-title">商家端解限流</h1>
+                
+                <!-- Info Card -->
+                <div class="banner-info-card">
+                    <div class="info-card-item">
+                        <span class="info-value">2025.10 ~ 2025.12</span>
+                        <span class="info-label">项目时间</span>
+                    </div>
+                    <div class="info-card-item">
+                        <span class="info-value">商家降供率</span>
+                        <span class="info-label">核心指标</span>
+                    </div>
+                    <div class="info-card-item">
+                        <span class="info-value">单人</span>
+                        <span class="info-label">项目类型</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- 1. 背景介绍 -->
-        <section class="detail-section container">
-            <h2 class="section-title">背景介绍</h2>
-            
-            <div class="content-block">
-                <h3 class="subsection-title">为什么需要商家调节供价（供货价格）？</h3>
-                <img src="images/ml-01-background-why.png" alt="为什么需要商家调节供价" class="detail-image auto-width">
-            </div>
+        <section class="detail-section container" style="margin-bottom: 16px;">
+            <h2 class="section-title" style="margin-bottom: 0;">背景介绍</h2>
+        </section>
 
+        <!-- Full Width Orange Strip for Why Need Merchant Price Adjustment -->
+        <section class="full-width-section bg-light-orange" style="padding-top: 32px;">
+            <div class="container">
+                <div class="content-block">
+                    <h3 class="subsection-title">为什么需要商家调节供价（供货价格）？</h3>
+                    <img src="images/ml-01-background-why.png" alt="为什么需要商家调节供价" class="detail-image width-80 no-shadow">
+                </div>
+            </div>
+        </section>
+
+        <section class="detail-section container">
             <div class="content-block">
                 <h3 class="subsection-title">我们如何触达商家？</h3>
                 <img src="images/ml-02-background-reach.png" alt="我们如何触达商家" class="detail-image">
@@ -57,11 +81,9 @@
         </section>
 
         <!-- 2. 用户流程 -->
-        <section class="full-width-section bg-light-blue">
-            <div class="container">
-                <h2 class="section-title">用户流程</h2>
-                <img src="images/ml-03-user-flow.png" alt="用户流程" class="detail-image auto-width">
-            </div>
+        <section class="detail-section container">
+            <h2 class="section-title">用户流程</h2>
+            <img src="images/ml-03-user-flow.png" alt="用户流程" class="detail-image auto-width no-shadow">
         </section>
 
         <!-- 3. 主要痛点 -->
@@ -102,7 +124,7 @@
         </section>
 
         <!-- 4. 针对策略 -->
-        <section class="full-width-section bg-light-purple">
+        <section class="full-width-section bg-light-orange">
             <div class="container">
                 <h2 class="section-title">针对策略</h2>
                 
@@ -136,8 +158,18 @@
         <!-- 5. 成果示意 -->
         <section class="detail-section container">
             <h2 class="section-title">成果示意</h2>
-            <div class="stack-col">
-                <img src="images/ml-08-result-1.png" alt="成果示意1" class="detail-image">
+            
+            <!-- Tab-based Image Switcher -->
+            <div class="tab-image-container">
+                <div class="image-display">
+                    <img src="images/ml-08-result-tab1.png" alt="调价管理 (默认)" class="content-img no-bottom-radius">
+                </div>
+                <div class="tab-controls">
+                    <div class="tab-item active" data-img="images/ml-08-result-tab1.png">调价管理 (默认)</div>
+                    <div class="tab-item" data-img="images/ml-08-result-tab2.png">调价管理 (交互说明)</div>
+                    <div class="tab-item" data-img="images/ml-08-result-tab3.png">获取流量提升机会</div>
+                    <div class="tab-item" data-img="images/ml-08-result-tab4.png">流量异常商品</div>
+                </div>
             </div>
         </section>
 
@@ -148,23 +180,43 @@
             </div>
         </section>
 
-        <section class="detail-section container">
-            <div class="stack-col">
-                <img src="images/ml-10-result-3.png" alt="成果示意3" class="detail-image">
-            </div>
-        </section>
-
         <!-- 6. 试错复盘 -->
         <section class="detail-section container">
             <h2 class="section-title">试错复盘</h2>
-            <img src="images/ml-11-review.png" alt="试错复盘" class="detail-image auto-width align-left">
+            
+            <!-- Direction 1 -->
+            <div class="content-block">
+                <h3 class="gradient-heading">方向一：按申报价分档</h3>
+                <p class="body-text review-body-text">
+                    <span class="highlight-bracket">未采纳原因：</span>输入的操作成本较高，仅部分商家对SKU价格有明确的心理底线
+                </p>
+                <img src="images/ml-11-review-1.png" alt="方向一：按申报价分档" class="detail-image width-60 align-left no-shadow">
+            </div>
+
+            <!-- Direction 2 -->
+            <div class="content-block mt-loose">
+                <h3 class="gradient-heading">方向二：平铺站点分档</h3>
+                <p class="body-text review-body-text">
+                    <span class="highlight-bracket">未采纳原因：</span>信息密度过大，首页弹窗场景下用户没有足够的时间和操作动力
+                </p>
+                <img src="images/ml-11-review-2.png" alt="方向二：平铺站点分档" class="detail-image width-80 align-left no-shadow">
+            </div>
+
+            <!-- Direction 3 -->
+            <div class="content-block mt-loose">
+                <h3 class="gradient-heading">方向三：按限流范围分档</h3>
+                <p class="body-text review-body-text">
+                    <span class="highlight-bracket">未采纳原因：</span>1.选项位置居中，部分商户无法感知 2.分档逻辑不清晰 3.兼容自定义场景较差
+                </p>
+                <img src="images/ml-11-review-3.png" alt="方向三：按限流范围分档" class="detail-image width-80 align-left no-shadow">
+            </div>
         </section>
 
         <!-- 7. 总结 -->
         <section class="full-width-banner black-banner summary-banner">
             <div class="container">
                 <p class="summary-text-bold">
-                    总结：以解决<span class="text-blue">主要矛盾</span>为核心，从“为什么要做”到“为什么不做”
+                    总结：以解决<span class="text-orange">主要矛盾</span>为核心，从“为什么要做”到“为什么不做”
                 </p>
             </div>
         </section>

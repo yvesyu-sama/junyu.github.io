@@ -171,7 +171,7 @@ nav a:hover, nav a.active {
 }
 
 .intro-heading {
-    font-size: 2.5rem;
+    font-size: 32px;
     margin-bottom: 24px;
     letter-spacing: -1px;
 }
@@ -400,12 +400,12 @@ nav a:hover, nav a.active {
 }
 
 .section-title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-bottom: 24px; /* Reduced from 40px */
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 32px; /* Reduced from 40px */
     color: var(--text-primary);
     position: relative;
-    padding-left: 20px;
+    padding-left: 24px;
 }
 
 .section-title::before {
@@ -414,9 +414,9 @@ nav a:hover, nav a.active {
     left: 0;
     top: 6px;
     bottom: 6px;
-    width: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
+    width: 6px;
+    background-color: #f97316; /* Orange 500 */
+    border-radius: 3px;
 }
 
 .content-block {
@@ -717,7 +717,7 @@ nav a:hover, nav a.active {
     }
     
     .intro-heading {
-        font-size: 2.5rem;
+        font-size: 32px;
     }
     
     .project-item {
@@ -802,17 +802,124 @@ nav a:hover, nav a.active {
     color: var(--text-primary);
 }
 
+/* Banner Info Card */
+.banner-info-card {
+    background-color: rgba(255, 247, 237, 0.9); /* Orange-50 with 90% opacity */
+    backdrop-filter: blur(8px); /* Optional: adds a nice blur effect */
+    border-radius: 12px;
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 840px;
+    gap: 0;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.info-card-item {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.info-card-item:not(:last-child) {
+    border-right: 1px solid #fed7aa; /* Orange-200 */
+}
+
+.info-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937; /* Gray-800 */
+    line-height: 1.2;
+}
+
+.info-label {
+    font-size: 0.875rem;
+    color: #9ca3af; /* Gray-400 */
+}
+
+@media (max-width: 768px) {
+    .banner-info-card {
+        flex-direction: column;
+        padding: 24px;
+        width: 90%;
+        gap: 24px;
+    }
+
+    .info-card-item {
+        padding: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .info-card-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #fed7aa;
+        padding-bottom: 24px;
+    }
+}
+
 /* Project Specific Banner */
 .merchant-limit-banner {
-    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); /* Blue-400 to Blue-500 */
+    background: linear-gradient(135deg, #fdba74 0%, #fb923c 100%); /* Warm Orange Gradient */
     position: relative;
     overflow: hidden;
+    padding: 0;
+    text-align: center;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px; /* Add space below banner */
+}
+
+.merchant-limit-banner .page-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0;
 }
 
 .kol-banner {
-    background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%); /* Orange-400 to Orange-600 */
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); /* Light Blue Gradient (Blue-50 to Blue-100) */
     position: relative;
     overflow: hidden;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.kol-banner .page-title {
+    color: #5482a3; /* Muted Steel Blue */
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    z-index: 2;
+}
+
+/* Specific Info Card styles for KOL banner */
+.kol-banner .banner-info-card {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 24px;
+    z-index: 2;
+}
+
+.kol-banner .info-card-item:not(:last-child) {
+    border-right: 1px solid #bfdbfe; /* Blue-200 */
+}
+
+@media (max-width: 768px) {
+    .kol-banner .info-card-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #bfdbfe;
+    }
 }
 
 .flow-background {
@@ -845,10 +952,20 @@ nav a:hover, nav a.active {
 /* Width & Alignment Utilities */
 .width-60 {
     max-width: 60% !important;
+    margin: 0 auto; /* Center by default */
+}
+
+.width-70 {
+    max-width: 70% !important;
 }
 
 .width-80 {
     max-width: 80% !important;
+    margin: 0 auto; /* Center by default */
+}
+
+.width-85 {
+    max-width: 85% !important;
 }
 
 .auto-width {
@@ -880,6 +997,14 @@ nav a:hover, nav a.active {
 
 .bg-light-blue {
     background-color: #f6faff;
+}
+
+.bg-light-yellow {
+    background-color: #fffbeb;
+}
+
+.bg-light-orange {
+    background-color: #fff7ed;
 }
 
 /* Typography Colors */
@@ -918,4 +1043,88 @@ nav a:hover, nav a.active {
     color: #94a3b8;
     margin-top: 8px;
     font-style: italic;
+}
+
+/* Gradient Heading for Review Section */
+.gradient-heading {
+    display: inline-block;
+    background: linear-gradient(90deg, #ffedd5 0%, rgba(255, 255, 255, 0) 100%); /* Orange-100 fading out */
+    color: #f97316; /* Orange-500 */
+    padding: 10px 24px;
+    border-radius: 9999px; /* Pill shape */
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    width: 100%; /* Make it full width for the gradient effect */
+}
+
+/* KOL Project Specific Overrides */
+.kol-section-title {
+    font-size: 1.75rem !important; /* Slightly smaller than 2rem */
+}
+
+.kol-section-title::before {
+    background-color: #3b82f6 !important; /* Blue 500 */
+}
+
+/* Indented body text for Review Section */
+.review-body-text {
+    text-indent: 1em; /* Indent first line by 1 character */
+    color: #718096; /* Lighter than --text-secondary (#4a5568) */
+}
+
+/* Image Utilities */
+.no-shadow {
+    box-shadow: none !important;
+}
+
+/* Image Switcher Styles */
+.tab-image-container {
+    background: #fff;
+    border-radius: 8px; /* Keep top corners smaller or update all */
+    border-bottom-left-radius: 24px; /* Purely round bottom corners */
+    border-bottom-right-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.image-display img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.tab-controls {
+    display: flex;
+    background-color: #f9fafb; /* Light gray bg for tab bar */
+    padding: 10px;
+    gap: 10px;
+    overflow-x: auto; /* Allow scroll on small screens */
+    /* Ensure the background follows the container's radius if not clipped properly, 
+       but overflow:hidden on container handles it. */
+}
+
+.tab-item {
+    flex: 1;
+    text-align: center;
+    padding: 12px 16px; /* Increased horizontal padding for pill shape */
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 9999px; /* Purely round (pill shape) */
+    transition: all 0.2s;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.tab-item:hover {
+    background-color: #e5e7eb;
+}
+
+.tab-item.active {
+    background-color: #f97316; /* Orange 500 */
+    color: white;
 }

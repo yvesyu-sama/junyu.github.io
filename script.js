@@ -85,4 +85,37 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Tab Switching Logic for Merchant Limit Project
+    const tabContainer = document.querySelector('.tab-image-container');
+    if (tabContainer) {
+        const displayImg = tabContainer.querySelector('.image-display img');
+        const tabItems = tabContainer.querySelectorAll('.tab-item');
+
+        tabItems.forEach(tab => {
+            tab.addEventListener('mouseenter', () => { // Change on hover
+                // Update active state
+                tabItems.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Update image
+                const newSrc = tab.getAttribute('data-img');
+                if (newSrc && displayImg) {
+                    displayImg.src = newSrc;
+                    displayImg.alt = tab.textContent; // Update alt text for accessibility
+                }
+            });
+            
+            // Also support click for mobile/touch devices where hover isn't reliable
+            tab.addEventListener('click', () => {
+                tabItems.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const newSrc = tab.getAttribute('data-img');
+                if (newSrc && displayImg) {
+                    displayImg.src = newSrc;
+                    displayImg.alt = tab.textContent;
+                }
+            });
+        });
+    }
 });
