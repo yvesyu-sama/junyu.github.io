@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Computing - JUN YU</title>
+    <link rel="icon" href="images/logo-y.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background:
+                radial-gradient(900px 520px at 10% 10%, rgba(142, 197, 252, 0.30), rgba(255, 255, 255, 0) 65%),
+                radial-gradient(900px 520px at 90% 0%, rgba(224, 195, 252, 0.26), rgba(255, 255, 255, 0) 60%),
+                linear-gradient(135deg, rgba(246, 250, 255, 1) 0%, rgba(248, 250, 252, 1) 55%, #ffffff 100%);
+            background-attachment: fixed;
+        }
+        .design-computing-section {
+            padding: 40px 0 56px;
+        }
+        .dc-lead {
+            margin: 24px 0 72px;
+            max-width: 920px;
+            margin-right: auto;
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: clamp(1.18rem, 1.6vw, 1.55rem);
+            line-height: 1.55;
+            letter-spacing: 0.2px;
+            color: rgba(15, 23, 42, 0.78);
+            text-align: left;
+        }
+        .pdf-frame {
+            width: 100%;
+            height: calc(100vh - 190px);
+            border: 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner container">
+            <a href="index.html" class="brand-group">
+                <div class="logo-y">
+                    <img src="images/logo-y.png" alt="Y Logo" class="logo-img">
+                </div>
+                <span class="designer-name">Jun Yu</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html#works" class="nav-link">My Works</a>
+                <a href="design-computing.html" class="nav-link" style="color: var(--accent-color); font-weight: 600;">Design Computing</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="design-computing-section container">
+            <div class="dc-lead">一些有趣的设计技术项目（2018-2020），包括参数化设计、自动化机械臂，算法在空间形态和街区规划中的应用等</div>
+            <iframe class="pdf-frame" src="images/Portfolio.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Design Computing - Portfolio PDF"></iframe>
+        </section>
+    </main>
+
+    <footer class="site-footer container">
+        <div class="footer-content">
+            <p>&copy; 2026 JUN YU. Designed with AI assistance.</p>
+        </div>
+    </footer>
+</body>
+</html>
