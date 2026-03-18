@@ -136,6 +136,41 @@ nav a:hover, nav a.active {
     z-index: 0;
     pointer-events: none;
     overflow: hidden;
+    height: 520px;
+    background: linear-gradient(180deg, rgba(250, 251, 255, 0.92) 0%, #ffffff 78%);
+}
+
+.wave-background::before,
+.wave-background::after {
+    content: "";
+    position: absolute;
+    inset: auto;
+    border-radius: 999px;
+    filter: blur(60px);
+    opacity: 0.85;
+    transform: translateZ(0);
+}
+
+.wave-background::before {
+    width: 760px;
+    height: 520px;
+    left: -260px;
+    top: -260px;
+    background:
+        radial-gradient(circle at 65% 65%, rgba(167, 139, 250, 0.70) 0%, rgba(167, 139, 250, 0.00) 68%),
+        radial-gradient(circle at 30% 40%, rgba(147, 197, 253, 0.26) 0%, rgba(147, 197, 253, 0.00) 70%);
+    transform: rotate(-10deg);
+}
+
+.wave-background::after {
+    width: 1120px;
+    height: 680px;
+    right: -420px;
+    top: -320px;
+    background:
+        radial-gradient(circle at 35% 55%, rgba(129, 140, 248, 0.62) 0%, rgba(129, 140, 248, 0.00) 70%),
+        radial-gradient(circle at 70% 40%, rgba(56, 189, 248, 0.22) 0%, rgba(56, 189, 248, 0.00) 68%);
+    transform: rotate(8deg);
 }
 
 .wave-background svg {
@@ -143,6 +178,9 @@ nav a:hover, nav a.active {
     height: auto;
     display: block;
     min-height: 500px; /* Ensure it covers enough height */
+    opacity: 0;
+    height: 0;
+    min-height: 0;
 }
 
 .hero {
