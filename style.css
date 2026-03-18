@@ -123,9 +123,35 @@ nav a:hover, nav a.active {
 /* Hero Section */
 .hero-section {
     position: relative;
-    z-index: 1; /* Ensure text is above wave */
+    z-index: 1;
     padding: 60px 0;
     padding-top: 40px; /* Moved down slightly */
+}
+
+.hero-banner {
+    width: 100%;
+    padding: 0;
+    background-image: url("images/home-hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 480px;
+}
+
+.hero-banner-content {
+    min-height: 480px;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 0;
+    padding-bottom: 44px;
+}
+
+.hero-banner .hero-text {
+    max-width: 760px;
+}
+
+.hero-banner .hero-img-container {
+    margin: 0 0 18px 0;
 }
 
 .wave-background {
@@ -138,6 +164,7 @@ nav a:hover, nav a.active {
     overflow: hidden;
     height: 520px;
     background: linear-gradient(180deg, rgba(250, 251, 255, 0.92) 0%, #ffffff 78%);
+    isolation: isolate;
 }
 
 .wave-background::before,
@@ -145,6 +172,7 @@ nav a:hover, nav a.active {
     content: "";
     position: absolute;
     inset: auto;
+    z-index: 0;
     border-radius: 999px;
     filter: blur(60px);
     opacity: 0.85;
@@ -174,13 +202,13 @@ nav a:hover, nav a.active {
 }
 
 .wave-background svg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    min-height: 500px; /* Ensure it covers enough height */
-    opacity: 0;
-    height: 0;
-    min-height: 0;
+    opacity: 1;
 }
 
 .hero {
@@ -256,20 +284,43 @@ nav a:hover, nav a.active {
     font-weight: 600;
 }
 
+.section-label--recent {
+    font-size: 14px;
+    text-transform: none;
+    letter-spacing: 0;
+    color: rgba(74, 85, 104, 0.75);
+    font-weight: 400;
+}
+
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    position: relative;
+    padding-top: 32px;
+}
+
+.project-grid::before {
+    content: "近期项目";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    color: rgba(74, 85, 104, 0.75);
+    font-weight: 400;
 }
 
 .project-card {
     background: #fff;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    width: 100%;
+    height: 360px;
 }
 
 .project-card:hover {
@@ -278,7 +329,8 @@ nav a:hover, nav a.active {
 }
 
 .card-image-container {
-    height: 200px;
+    flex: 0 0 calc(54% + 120px);
+    height: 100%;
     background-color: #f0f2f5;
     overflow: hidden;
     position: relative;
@@ -303,21 +355,36 @@ nav a:hover, nav a.active {
 }
 
 .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 8px;
+    font-size: 32px;
+    margin-bottom: 14px;
+    letter-spacing: -0.6px;
 }
 
 .card-desc {
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-bottom: 24px;
+    position: relative;
+    padding-top: 18px;
     flex: 1;
+}
+
+.card-desc::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    left: 0;
+    top: 6px;
+    border-radius: 999px;
+    background-color: #fbbf24;
 }
 
 .card-footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
     margin-top: auto;
 }
 
@@ -769,6 +836,26 @@ nav a:hover, nav a.active {
     .banner-content {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .project-card {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .card-image-container {
+        flex: none;
+        height: 220px;
+    }
+
+    .card-title {
+        font-size: 28px;
+    }
+
+    .hero-banner-content {
+        min-height: 420px;
+        padding-bottom: 28px;
     }
 }
 
