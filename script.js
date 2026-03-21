@@ -118,4 +118,90 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    const uxCollectionSection = document.querySelector('.ux-collection-section');
+    if (uxCollectionSection) {
+        const filterButtons = Array.from(document.querySelectorAll('[data-ux-filter]'));
+        const items = Array.from(document.querySelectorAll('.ux-item'));
+        const navLinks = Array.from(document.querySelectorAll('.ux-collection-link'));
+
+        const parseTags = (raw) => {
+            if (!raw) return [];
+            return raw
+                .split(/[\s,，]+/g)
+                .map(t => t.trim())
+                .filter(Boolean);
+        };
+
+        const isVisible = (el) => !el.classList.contains('is-hidden');
+
+        const setActiveSection = (id) => {
+            navLinks.forEach(link => {
+                const targetId = (link.getAttribute('href') || '').replace('#', '');
+                const active = targetId === id;
+                link.classList.toggle('active', active);
+                if (active) {
+                    link.setAttribute('aria-current', 'true');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+        };
+
+        const applyFilter = (filterValue) => {
+            const normalized = (filterValue || '').trim();
+            items.forEach(item => {
+                const tags = parseTags(item.dataset.tags);
+                const shouldShow = normalized === 'all' || tags.includes(normalized);
+                item.classList.toggle('is-hidden', !shouldShow);
+            });
+
+            navLinks.forEach(link => {
+                const targetId = (link.getAttribute('href') || '').replace('#', '');
+                const section = document.getElementById(targetId);
+                const shouldShow = section ? isVisible(section) : true;
+                link.classList.toggle('is-hidden', !shouldShow);
+            });
+
+            const firstVisible = items.find(isVisible);
+            if (firstVisible) setActiveSection(firstVisible.id);
+        };
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+                applyFilter(btn.getAttribute('data-ux-filter') || 'all');
+            });
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const targetId = (link.getAttribute('href') || '').replace('#', '');
+                if (targetId) setActiveSection(targetId);
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            const visibleEntries = entries.filter(e => e.isIntersecting && isVisible(e.target));
+            if (!visibleEntries.length) return;
+            visibleEntries.sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
+            setActiveSection(visibleEntries[0].target.id);
+        }, {
+            root: null,
+            threshold: [0.2, 0.35, 0.5],
+            rootMargin: '-120px 0px -55% 0px'
+        });
+
+        items.forEach(item => observer.observe(item));
+
+        const defaultBtn = filterButtons.find(b => b.classList.contains('active')) || filterButtons[0];
+        if (defaultBtn) {
+            applyFilter(defaultBtn.getAttribute('data-ux-filter') || 'all');
+        }
+    }
 });

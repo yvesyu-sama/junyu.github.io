@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Collection - JUN YU</title>
+    <link rel="icon" href="images/logo-y.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner container">
+            <a href="index.html" class="brand-group">
+                <div class="logo-y">
+                    <img src="images/logo-y.png" alt="Y Logo" class="logo-img">
+                </div>
+                <span class="designer-name">Jun Yu</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="ux-collection.html" class="nav-link active">UX Collection</a>
+                <a href="design-computing.html" class="nav-link">Design Computing</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="ux-collection-section container">
+            <div class="ux-collection-filters" role="tablist" aria-label="项目筛选">
+                <button class="ux-filter active" type="button" data-ux-filter="all" role="tab" aria-selected="true">全部</button>
+                <button class="ux-filter" type="button" data-ux-filter="A端" role="tab" aria-selected="false">A端</button>
+                <button class="ux-filter" type="button" data-ux-filter="B端" role="tab" aria-selected="false">B端</button>
+                <button class="ux-filter" type="button" data-ux-filter="C端" role="tab" aria-selected="false">C端</button>
+            </div>
+
+            <div class="ux-collection-layout">
+                <aside class="ux-collection-sidebar">
+                    <nav class="ux-collection-nav" aria-label="项目导航">
+                        <a class="ux-collection-link active" href="#task-automation"><span class="ux-collection-dot"></span><span>任务自动化</span></a>
+                        <a class="ux-collection-link" href="#visual-task-board"><span class="ux-collection-dot"></span><span>可视化任务看板</span></a>
+                        <a class="ux-collection-link" href="#return-management"><span class="ux-collection-dot"></span><span>退货管理</span></a>
+                        <a class="ux-collection-link" href="#merchant-initiated-refund"><span class="ux-collection-dot"></span><span>商家主动退款</span></a>
+                        <a class="ux-collection-link" href="#shopworx"><span class="ux-collection-dot"></span><span>Shopworx</span></a>
+                        <a class="ux-collection-link" href="#picpaw"><span class="ux-collection-dot"></span><span>Picpaw</span></a>
+                        <a class="ux-collection-link" href="#pinocchio"><span class="ux-collection-dot"></span><span>Pinocchio</span></a>
+                        <a class="ux-collection-link" href="#food-print"><span class="ux-collection-dot"></span><span>Food Print</span></a>
+                    </nav>
+                </aside>
+
+                <div class="ux-collection-content">
+                    <article id="task-automation" class="ux-item" data-tags="A端 逻辑配置">
+                        <h2 class="ux-item-title">【外协】任务自动化配置</h2>
+                        <div class="ux-item-meta">项目时间：2025.12 · A端 · 逻辑配置</div>
+                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                    </article>
+
+                    <article id="visual-task-board" class="ux-item" data-tags="A端 看板">
+                        <h2 class="ux-item-title">【外协】可视化任务看板</h2>
+                        <div class="ux-item-meta">项目时间：2025.12 · A端 · 看板</div>
+                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                    </article>
+
+                    <article id="return-management" class="ux-item" data-tags="B端 商家端 逆向支付流程">
+                        <h2 class="ux-item-title">【本本商家端】退货管理</h2>
+                        <div class="ux-item-meta">项目时间：2023.05 · B端 · 商家端 · 逆向支付流程</div>
+                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                    </article>
+
+                    <article id="merchant-initiated-refund" class="ux-item" data-tags="B端 商家端 逆向支付流程">
+                        <h2 class="ux-item-title">【本本商家端】支持商家主动退款</h2>
+                        <div class="ux-item-meta">项目时间：2023.06 · B端 · 商家端 · 逆向支付流程</div>
+                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                    </article>
+
+                    <article id="shopworx" class="ux-item" data-tags="B端 国际团队合作 非标自动化">
+                        <h2 class="ux-item-title">【工业平台】Shopworx</h2>
+                        <div class="ux-item-meta">项目时间：2020.12 · B端 · 国际团队合作 · 非标自动化</div>
+                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                    </article>
+
+                    <article id="picpaw" class="ux-item" data-tags="B端 翻译工具">
+                        <h2 class="ux-item-title">Picpaw</h2>
+                        <div class="ux-item-meta">项目时间：2022.08 · B端 · 翻译工具</div>
+                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                    </article>
+
+                    <article id="pinocchio" class="ux-item" data-tags="C端 新闻资讯App">
+                        <h2 class="ux-item-title">Pinocchio</h2>
+                        <div class="ux-item-meta">项目时间：2022.09 · C端 · 新闻资讯App</div>
+                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                    </article>
+
+                    <article id="food-print" class="ux-item" data-tags="C端 社交 食品交易">
+                        <h2 class="ux-item-title">Food Print</h2>
+                        <div class="ux-item-meta">项目时间：2021.12 · C端 · 社交 · 食品交易</div>
+                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer container">
+        <div class="footer-content">
+            <p>&copy; 2026 JUN YU. Designed with AI assistance.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
