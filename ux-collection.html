@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="ux-collection-page">
     <header class="site-header">
         <div class="header-inner container">
             <a href="index.html" class="brand-group">
@@ -32,72 +32,138 @@
         <section class="ux-collection-section container">
             <div class="ux-collection-filters" role="tablist" aria-label="项目筛选">
                 <button class="ux-filter active" type="button" data-ux-filter="all" role="tab" aria-selected="true">全部</button>
+                <button class="ux-filter" type="button" data-ux-filter="商家端" role="tab" aria-selected="false">商家端</button>
                 <button class="ux-filter" type="button" data-ux-filter="A端" role="tab" aria-selected="false">A端</button>
-                <button class="ux-filter" type="button" data-ux-filter="B端" role="tab" aria-selected="false">B端</button>
                 <button class="ux-filter" type="button" data-ux-filter="C端" role="tab" aria-selected="false">C端</button>
             </div>
 
             <div class="ux-collection-layout">
                 <aside class="ux-collection-sidebar">
                     <nav class="ux-collection-nav" aria-label="项目导航">
-                        <a class="ux-collection-link active" href="#task-automation"><span class="ux-collection-dot"></span><span>任务自动化</span></a>
-                        <a class="ux-collection-link" href="#visual-task-board"><span class="ux-collection-dot"></span><span>可视化任务看板</span></a>
-                        <a class="ux-collection-link" href="#return-management"><span class="ux-collection-dot"></span><span>退货管理</span></a>
-                        <a class="ux-collection-link" href="#merchant-initiated-refund"><span class="ux-collection-dot"></span><span>商家主动退款</span></a>
-                        <a class="ux-collection-link" href="#shopworx"><span class="ux-collection-dot"></span><span>Shopworx</span></a>
-                        <a class="ux-collection-link" href="#picpaw"><span class="ux-collection-dot"></span><span>Picpaw</span></a>
-                        <a class="ux-collection-link" href="#pinocchio"><span class="ux-collection-dot"></span><span>Pinocchio</span></a>
-                        <a class="ux-collection-link" href="#food-print"><span class="ux-collection-dot"></span><span>Food Print</span></a>
+                        <a class="ux-collection-link active" href="#task-automation"><span class="ux-collection-dot"></span><span class="ux-collection-label">任务自动化</span></a>
+                        <a class="ux-collection-link" href="#visual-task-board"><span class="ux-collection-dot"></span><span class="ux-collection-label">可视化任务看板</span></a>
+                        <a class="ux-collection-link" href="#return-management"><span class="ux-collection-dot"></span><span class="ux-collection-label">退货管理</span></a>
+                        <a class="ux-collection-link" href="#merchant-initiated-refund"><span class="ux-collection-dot"></span><span class="ux-collection-label">商家主动退款</span></a>
+                        <a class="ux-collection-link" href="#shopworx"><span class="ux-collection-dot"></span><span class="ux-collection-label">Shopworx</span></a>
+                        <a class="ux-collection-link" href="#picpaw"><span class="ux-collection-dot"></span><span class="ux-collection-label">Picpaw</span></a>
+                        <a class="ux-collection-link" href="#pinocchio"><span class="ux-collection-dot"></span><span class="ux-collection-label">Pinocchio</span></a>
+                        <a class="ux-collection-link" href="#food-print"><span class="ux-collection-dot"></span><span class="ux-collection-label">Food Print</span></a>
                     </nav>
                 </aside>
 
                 <div class="ux-collection-content">
                     <article id="task-automation" class="ux-item" data-tags="A端 逻辑配置">
                         <h2 class="ux-item-title">【外协】任务自动化配置</h2>
-                        <div class="ux-item-meta">项目时间：2025.12 · A端 · 逻辑配置</div>
-                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                        <div class="ux-item-tags">
+                            <span class="ux-tag">项目时间：2025.12</span>
+                            <span class="ux-tag">A端</span>
+                            <span class="ux-tag">逻辑配置</span>
+                        </div>
+                        <img class="ux-item-placeholder" src="images/任务自动化-主图.png" alt="">
                     </article>
 
                     <article id="visual-task-board" class="ux-item" data-tags="A端 看板">
                         <h2 class="ux-item-title">【外协】可视化任务看板</h2>
-                        <div class="ux-item-meta">项目时间：2025.12 · A端 · 看板</div>
-                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                        <div class="ux-item-tags">
+                            <span class="ux-tag">项目时间：2025.12</span>
+                            <span class="ux-tag">A端</span>
+                            <span class="ux-tag">看板</span>
+                        </div>
+                        <img class="ux-item-placeholder" src="images/可视化任务看板-主图.png" alt="">
                     </article>
 
                     <article id="return-management" class="ux-item" data-tags="B端 商家端 逆向支付流程">
                         <h2 class="ux-item-title">【本本商家端】退货管理</h2>
-                        <div class="ux-item-meta">项目时间：2023.05 · B端 · 商家端 · 逆向支付流程</div>
-                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                        <div class="ux-item-tags">
+                            <span class="ux-tag">项目时间：2023.05</span>
+                            <span class="ux-tag">B端</span>
+                            <span class="ux-tag">商家端</span>
+                            <span class="ux-tag">逆向支付流程</span>
+                        </div>
+                        <div class="tab-image-container">
+                            <div class="image-display">
+                                <img src="images/退货管理-入口.png" alt="入口" class="ux-item-placeholder">
+                            </div>
+                            <div class="tab-controls">
+                                <div class="tab-item active" data-img="images/退货管理-入口.png">入口</div>
+                                <div class="tab-item" data-img="images/退货管理-首页.png">首页</div>
+                                <div class="tab-item" data-img="images/退货管理-批准退货.png">批准退货</div>
+                                <div class="tab-item" data-img="images/退货管理-仅退款.png">仅退款</div>
+                                <div class="tab-item" data-img="images/退货管理-退货退款.png">退货退款</div>
+                                <div class="tab-item" data-img="images/退货管理-拒绝售后请求.png">拒绝售后请求</div>
+                            </div>
+                        </div>
                     </article>
 
                     <article id="merchant-initiated-refund" class="ux-item" data-tags="B端 商家端 逆向支付流程">
                         <h2 class="ux-item-title">【本本商家端】支持商家主动退款</h2>
-                        <div class="ux-item-meta">项目时间：2023.06 · B端 · 商家端 · 逆向支付流程</div>
-                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                        <div class="ux-item-tags">
+                            <span class="ux-tag">项目时间：2023.06</span>
+                            <span class="ux-tag">B端</span>
+                            <span class="ux-tag">商家端</span>
+                            <span class="ux-tag">逆向支付流程</span>
+                        </div>
+                        <div class="tab-image-container">
+                            <div class="image-display">
+                                <img src="images/商家主动退款-入口.png" alt="入口" class="ux-item-placeholder">
+                            </div>
+                            <div class="tab-controls">
+                                <div class="tab-item active" data-img="images/商家主动退款-入口.png">入口</div>
+                                <div class="tab-item" data-img="images/商家主动退款-单品-按件数退款.png">单品-按件数退款</div>
+                                <div class="tab-item" data-img="images/商家主动退款-多个商品.png">多个商品</div>
+                                <div class="tab-item" data-img="images/商家主动退款-单品-按金额退款.png">单品-按金额退款</div>
+                            </div>
+                        </div>
                     </article>
 
                     <article id="shopworx" class="ux-item" data-tags="B端 国际团队合作 非标自动化">
                         <h2 class="ux-item-title">【工业平台】Shopworx</h2>
-                        <div class="ux-item-meta">项目时间：2020.12 · B端 · 国际团队合作 · 非标自动化</div>
-                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                        <div class="ux-item-tags">
+                            <span class="ux-tag">项目时间：2020.12</span>
+                            <span class="ux-tag">B端</span>
+                            <span class="ux-tag">国际团队合作</span>
+                            <span class="ux-tag">非标自动化</span>
+                        </div>
+                        <img class="ux-item-placeholder" src="images/Shopworx-主图.png" alt="">
                     </article>
 
                     <article id="picpaw" class="ux-item" data-tags="B端 翻译工具">
                         <h2 class="ux-item-title">Picpaw</h2>
-                        <div class="ux-item-meta">项目时间：2022.08 · B端 · 翻译工具</div>
-                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                        <div class="ux-item-tags">
+                            <span class="ux-tag">项目时间：2022.08</span>
+                            <span class="ux-tag">B端</span>
+                            <span class="ux-tag">翻译工具</span>
+                        </div>
+                        <div class="tab-image-container">
+                            <div class="image-display">
+                                <img src="images/Picpaw-首页.png" alt="首页" class="ux-item-placeholder">
+                            </div>
+                            <div class="tab-controls">
+                                <div class="tab-item active" data-img="images/Picpaw-首页.png">首页</div>
+                                <div class="tab-item" data-img="images/Picpaw-操作页.png">操作页</div>
+                            </div>
+                        </div>
                     </article>
 
                     <article id="pinocchio" class="ux-item" data-tags="C端 新闻资讯App">
                         <h2 class="ux-item-title">Pinocchio</h2>
-                        <div class="ux-item-meta">项目时间：2022.09 · C端 · 新闻资讯App</div>
-                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                        <div class="ux-item-tags">
+                            <span class="ux-tag">项目时间：2022.09</span>
+                            <span class="ux-tag">C端</span>
+                            <span class="ux-tag">新闻资讯App</span>
+                        </div>
+                        <img class="ux-item-placeholder" src="images/Pinocchio-主图.png" alt="">
                     </article>
 
                     <article id="food-print" class="ux-item" data-tags="C端 社交 食品交易">
                         <h2 class="ux-item-title">Food Print</h2>
-                        <div class="ux-item-meta">项目时间：2021.12 · C端 · 社交 · 食品交易</div>
-                        <img class="ux-item-placeholder" src="images/placeholder.svg" alt="">
+                        <div class="ux-item-tags">
+                            <span class="ux-tag">项目时间：2021.12</span>
+                            <span class="ux-tag">C端</span>
+                            <span class="ux-tag">社交</span>
+                            <span class="ux-tag">食品交易</span>
+                        </div>
+                        <img class="ux-item-placeholder" src="images/Food-Print-主图.png" alt="">
                     </article>
                 </div>
             </div>
@@ -109,6 +175,10 @@
             <p>&copy; 2026 JUN YU. Designed with AI assistance.</p>
         </div>
     </footer>
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" src="" alt="Full screen image">
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

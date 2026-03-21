@@ -82,6 +82,13 @@ header:not(.site-header) {
     align-items: center;
 }
 
+.logo-y {
+    width: 32px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    overflow: hidden;
+}
+
 .logo-img {
     height: 100%;
     width: auto;
@@ -91,6 +98,10 @@ header:not(.site-header) {
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: -0.5px;
+}
+
+.designer-name {
+    font-size: calc(1.25rem - 2px);
 }
 
 .main-nav, nav ul {
@@ -361,7 +372,7 @@ nav a.active {
 }
 
 .card-title {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 14px;
     letter-spacing: -0.6px;
 }
@@ -856,7 +867,7 @@ nav a.active {
     }
 
     .card-title {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .hero-banner-content {
@@ -1260,8 +1271,39 @@ nav a.active {
     color: white;
 }
 
+.ux-collection-page .tab-controls {
+    background-color: rgba(148, 163, 184, 0.10);
+}
+
+.ux-collection-page .tab-item:hover {
+    background-color: rgba(139, 92, 246, 0.10);
+}
+
+.ux-collection-page .tab-item.active {
+    background-color: rgba(139, 92, 246, 0.12);
+    color: rgba(139, 92, 246, 1);
+}
+
+.ux-item .tab-image-container {
+    margin-bottom: 0;
+}
+
+.tab-image-container .ux-item-placeholder {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+}
+
 .ux-collection-section {
     padding: 40px 0 80px;
+}
+
+.ux-collection-page {
+    background:
+        radial-gradient(900px 520px at 10% 10%, rgba(224, 195, 252, 0.22), rgba(255, 255, 255, 0) 60%),
+        radial-gradient(900px 520px at 90% 0%, rgba(142, 197, 252, 0.22), rgba(255, 255, 255, 0) 65%),
+        linear-gradient(135deg, rgba(246, 250, 255, 1) 0%, rgba(248, 250, 252, 1) 55%, #ffffff 100%);
+    background-attachment: fixed;
 }
 
 .ux-collection-filters {
@@ -1272,27 +1314,28 @@ nav a.active {
 }
 
 .ux-filter {
-    border: 1px solid rgba(99, 102, 241, 0.55);
-    color: var(--accent-color);
-    background: rgba(99, 102, 241, 0.06);
+    border: 1px solid rgba(139, 92, 246, 0.75);
+    color: rgba(139, 92, 246, 0.95);
+    background: #ffffff;
     padding: 6px 14px;
     border-radius: 999px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.9rem;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .ux-filter.active {
-    background: var(--accent-color);
-    color: #ffffff;
-    border-color: var(--accent-color);
+    background: rgba(139, 92, 246, 0.12);
+    color: rgba(139, 92, 246, 1);
+    border-color: rgba(139, 92, 246, 0.9);
+    font-weight: 600;
 }
 
 .ux-collection-layout {
     display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 40px;
+    grid-template-columns: 200px 1fr;
+    gap: 18px;
     align-items: start;
 }
 
@@ -1305,8 +1348,8 @@ nav a.active {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding-left: 16px;
-    border-left: 1px solid rgba(148, 163, 184, 0.35);
+    padding-left: 0;
+    position: relative;
 }
 
 .ux-collection-link {
@@ -1317,15 +1360,53 @@ nav a.active {
     color: rgba(74, 85, 104, 0.85);
     font-weight: 500;
     transition: color 0.2s;
+    position: relative;
+}
+
+.ux-collection-link::before,
+.ux-collection-link::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    width: 1px;
+    background: rgba(148, 163, 184, 0.35);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.ux-collection-link::before {
+    top: -6px;
+    height: calc(50% + 6px);
+}
+
+.ux-collection-link::after {
+    top: 50%;
+    height: calc(50% + 6px);
+}
+
+.ux-collection-link:first-child::before {
+    display: none;
+}
+
+.ux-collection-link:last-child::after {
+    display: none;
+}
+
+.ux-collection-label {
+    padding: 6px 12px;
+    border-radius: 999px;
 }
 
 .ux-collection-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 2px solid rgba(148, 163, 184, 0.75);
-    background: transparent;
+    border: 2px solid rgba(203, 213, 225, 0.95);
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
     flex-shrink: 0;
+    position: relative;
+    z-index: 1;
     transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
@@ -1334,14 +1415,18 @@ nav a.active {
     font-weight: 600;
 }
 
+.ux-collection-link.active .ux-collection-label {
+    background: rgba(139, 92, 246, 0.12);
+    color: rgba(139, 92, 246, 1);
+}
+
 .ux-collection-link.active .ux-collection-dot {
-    background: var(--accent-color);
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18);
+    border-color: rgba(139, 92, 246, 1);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.22), 0 2px 6px rgba(15, 23, 42, 0.08);
 }
 
 .ux-item {
-    padding: 10px 0 52px;
+    padding: 10px 0 72px;
     border-bottom: 1px solid rgba(148, 163, 184, 0.25);
     scroll-margin-top: 108px;
 }
@@ -1353,8 +1438,50 @@ nav a.active {
 .ux-item-title {
     font-size: 28px;
     font-weight: 800;
-    margin-bottom: 8px;
+    margin-top: 24px;
+    margin-bottom: 16px;
     letter-spacing: -0.6px;
+}
+
+.ux-collection-page .ux-item-title {
+    position: relative;
+    padding-left: 6px;
+}
+
+.ux-collection-page #shopworx .ux-item-title,
+.ux-collection-page #picpaw .ux-item-title,
+.ux-collection-page #pinocchio .ux-item-title,
+.ux-collection-page #food-print .ux-item-title {
+    padding-left: 22px;
+}
+
+.ux-collection-page .ux-item-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 6px;
+    width: 6px;
+    background-color: rgba(139, 92, 246, 1);
+    border-radius: 3px;
+}
+
+.ux-item-tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.ux-tag {
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    color: rgba(100, 116, 139, 0.9);
+    background: #ffffff;
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
 .ux-item-meta {
@@ -1374,6 +1501,23 @@ nav a.active {
     background: #ffffff;
     object-fit: cover;
     display: block;
+}
+
+.ux-collection-page .ux-item-placeholder {
+    height: auto;
+    object-fit: contain;
+    background: transparent;
+    cursor: zoom-in;
+    border: 0;
+}
+
+.ux-collection-page .tab-image-container {
+    background: transparent;
+    box-shadow: none;
+}
+
+.ux-collection-page .ux-item:first-child .ux-item-title {
+    margin-top: 0;
 }
 
 .is-hidden {
@@ -1404,5 +1548,10 @@ nav a.active {
     .ux-collection-link {
         padding: 6px 2px;
         white-space: nowrap;
+    }
+
+    .ux-collection-link::before,
+    .ux-collection-link::after {
+        display: none;
     }
 }

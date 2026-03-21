@@ -47,13 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lightbox Logic
     const lightbox = document.getElementById('lightbox');
     if (lightbox) {
-        const lightboxImg = document.getElementById('lightbox-img');
-        const closeBtn = document.querySelector('.lightbox-close');
+        const lightboxImg = lightbox.querySelector('#lightbox-img') || lightbox.querySelector('.lightbox-img');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
         
         // Add click event to all detail images and content images
-        const images = document.querySelectorAll('.detail-image, .content-img');
+        const images = document.querySelectorAll('.detail-image, .content-img, .ux-item-placeholder');
         images.forEach(img => {
             img.addEventListener('click', () => {
+                if (!lightboxImg) return;
                 lightboxImg.src = img.src;
                 lightbox.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
@@ -65,11 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
             lightbox.classList.remove('active');
             document.body.style.overflow = ''; // Restore scrolling
             setTimeout(() => {
-                lightboxImg.src = ''; // Clear source after animation
+                if (lightboxImg) lightboxImg.src = ''; // Clear source after animation
             }, 300);
         };
 
-        closeBtn.addEventListener('click', closeLightbox);
+        if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
 
         // Close on clicking outside
         lightbox.addEventListener('click', (e) => {
@@ -86,38 +87,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Tab Switching Logic for Merchant Limit Project
-    const tabContainer = document.querySelector('.tab-image-container');
-    if (tabContainer) {
+    const escapeXml = (value) => {
+        return String(value)
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')
+            .replaceAll('"', '&quot;')
+            .replaceAll("'", '&apos;');
+    };
+
+    const makeLabelSvgDataUri = (label) => {
+        const safeLabel = escapeXml((label || '').trim());
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900"><rect width="100%" height="100%" fill="#f3f4f6"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="56" fill="#111827">${safeLabel}</text></svg>`;
+        return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+    };
+
+    const initTabImageContainer = (tabContainer) => {
         const displayImg = tabContainer.querySelector('.image-display img');
-        const tabItems = tabContainer.querySelectorAll('.tab-item');
+        const tabItems = Array.from(tabContainer.querySelectorAll('.tab-item'));
+        if (!displayImg || !tabItems.length) return;
+
+        const getTabSrc = (tab) => {
+            const explicit = tab.getAttribute('data-img');
+            if (explicit) return explicit;
+            const label = tab.getAttribute('data-label') || tab.textContent || '';
+            return makeLabelSvgDataUri(label);
+        };
+
+        const setActiveTab = (tab) => {
+            tabItems.forEach(t => t.classList.toggle('active', t === tab));
+            const newSrc = getTabSrc(tab);
+            if (newSrc) {
+                displayImg.src = newSrc;
+                displayImg.alt = (tab.textContent || '').trim();
+            }
+        };
 
         tabItems.forEach(tab => {
-            tab.addEventListener('mouseenter', () => { // Change on hover
-                // Update active state
-                tabItems.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-
-                // Update image
-                const newSrc = tab.getAttribute('data-img');
-                if (newSrc && displayImg) {
-                    displayImg.src = newSrc;
-                    displayImg.alt = tab.textContent; // Update alt text for accessibility
-                }
-            });
-            
-            // Also support click for mobile/touch devices where hover isn't reliable
-            tab.addEventListener('click', () => {
-                tabItems.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                const newSrc = tab.getAttribute('data-img');
-                if (newSrc && displayImg) {
-                    displayImg.src = newSrc;
-                    displayImg.alt = tab.textContent;
-                }
-            });
+            tab.addEventListener('mouseenter', () => setActiveTab(tab));
+            tab.addEventListener('click', () => setActiveTab(tab));
         });
-    }
+
+        const defaultTab = tabItems.find(t => t.classList.contains('active')) || tabItems[0];
+        if (defaultTab) setActiveTab(defaultTab);
+    };
+
+    document.querySelectorAll('.tab-image-container').forEach(initTabImageContainer);
 
     const uxCollectionSection = document.querySelector('.ux-collection-section');
     if (uxCollectionSection) {
