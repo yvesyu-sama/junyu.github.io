@@ -1064,6 +1064,133 @@ nav a.active {
     }
 }
 
+.project-comparison-page {
+    --comparison-accent: #0f766e;
+}
+
+.comparison-banner {
+    background: linear-gradient(135deg, #0f766e 0%, #0b5d52 100%);
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.comparison-banner .page-title {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.comparison-banner .page-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 4px;
+}
+
+.comparison-banner .banner-info-card {
+    background-color: rgba(209, 250, 229, 0.9);
+    box-shadow: none;
+}
+
+.comparison-banner .info-card-item:not(:last-child) {
+    border-right: 1px solid rgba(5, 150, 105, 0.25);
+}
+
+.comparison-banner .info-value {
+    color: #0f172a;
+}
+
+.comparison-banner .info-label {
+    color: rgba(15, 23, 42, 0.55);
+}
+
+.project-comparison-page .section-title::before {
+    background-color: var(--comparison-accent);
+}
+
+.project-comparison-page .pain-point-list li::before {
+    color: var(--comparison-accent);
+}
+
+.project-comparison-page .data-value {
+    color: var(--comparison-accent);
+}
+
+.project-comparison-page .compare-item {
+    padding-top: 44px;
+}
+
+.project-comparison-page .compare-label {
+    padding: 4px 14px;
+    line-height: 1.2;
+}
+
+.project-comparison-page .label-before {
+    background-color: rgba(148, 163, 184, 0.45);
+    color: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.project-comparison-page .label-after {
+    background-color: rgba(15, 118, 110, 0.92);
+    color: #ffffff;
+    border: 1px solid rgba(15, 118, 110, 0.4);
+}
+
+.project-comparison-page .optimization-section {
+    background-color: rgba(15, 118, 110, 0.06);
+}
+
+.project-comparison-page .purple-banner {
+    background-color: #0b5d52;
+}
+
+.project-comparison-page .detail-image.scale-80 {
+    max-width: 80%;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.project-comparison-page .detail-image.no-shadow {
+    box-shadow: none;
+}
+
+.comparison-effect-strip {
+    margin-top: 40px;
+    background-color: rgba(15, 118, 110, 0.06);
+    padding: 22px 0;
+}
+
+.comparison-effect-bar {
+    color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.project-comparison-page .comparison-effect-strip .stats-label {
+    color: rgba(15, 23, 42, 0.82);
+    margin-right: 0;
+}
+
+.project-comparison-page .comparison-effect-strip .stats-arrow {
+    color: var(--comparison-accent);
+}
+
+.project-comparison-page .comparison-effect-strip .stats-value-new {
+    color: var(--comparison-accent);
+}
+
 .flow-background {
     position: absolute;
     top: 0;

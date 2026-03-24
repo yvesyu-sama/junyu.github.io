@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/logo-y.png">
 </head>
-<body>
+<body class="project-comparison-page">
     <header class="site-header">
         <div class="header-inner container">
             <a href="index.html" class="brand-group">
@@ -29,10 +29,24 @@
     </header>
 
     <main class="detail-main">
-        <!-- Title Banner -->
-        <section class="project-title-banner">
+        <section class="comparison-banner">
             <div class="container">
                 <h1 class="page-title">同款对比</h1>
+                <p class="page-subtitle">根据任务行为重新设计操作页</p>
+                <div class="banner-info-card">
+                    <div class="info-card-item">
+                        <div class="info-value">2026.01</div>
+                        <div class="info-label">项目时间</div>
+                    </div>
+                    <div class="info-card-item">
+                        <div class="info-value">同款准确率</div>
+                        <div class="info-label">核心指标</div>
+                    </div>
+                    <div class="info-card-item">
+                        <div class="info-value">单人</div>
+                        <div class="info-label">项目类型</div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -42,7 +56,7 @@
             
             <div class="content-block">
                 <h3 class="subsection-title">1. temu如何保持低价心智？</h3>
-                <img src="images/p1-bg-temu.png" alt="Temu如何保持低价心智" class="detail-image">
+                <img src="images/p1-bg-temu.png" alt="Temu如何保持低价心智" class="detail-image no-shadow">
             </div>
 
             <div class="content-block">
@@ -52,7 +66,7 @@
 
             <div class="content-block">
                 <h3 class="subsection-title">3. 外包工作流（以最常见的同款标注任务为例）</h3>
-                <img src="images/p1-bg-workflow.png" alt="外包工作流" class="detail-image">
+                <img src="images/p1-bg-workflow.png" alt="外包工作流" class="detail-image no-shadow">
             </div>
         </section>
 
@@ -163,13 +177,13 @@
             <div class="content-block">
                 <h3 class="subsection-title">1. 支持快速筛选图片</h3>
                 <p class="body-text">仅查看携带重点字段的图片，方便快速判断</p>
-                <img src="images/p1-imp-filter.png" alt="快速筛选图片" class="detail-image">
+                <img src="images/p1-imp-filter.png" alt="快速筛选图片" class="detail-image scale-80">
             </div>
 
             <div class="content-block">
                 <h3 class="subsection-title">2. 快速跳转关键词</h3>
                 <p class="body-text">点击后快速筛选/锚定到对应字段，省略滑动时间</p>
-                <img src="images/p1-imp-jump.png" alt="快速跳转关键词" class="detail-image">
+                <img src="images/p1-imp-jump.png" alt="快速跳转关键词" class="detail-image scale-80">
             </div>
 
             <div class="content-block">
@@ -181,16 +195,17 @@
         <!-- 5. 最终成果 -->
         <section class="detail-section container">
             <h2 class="section-title">最终成果</h2>
-            <div class="final-result-container">
-                <img src="images/p1-final-result.png" alt="最终成果" class="detail-image no-bottom-radius">
-                <div class="result-stats-bar">
-                    <span class="stats-label">准确率：</span>
-                    <span class="stats-value-old">79.1%</span>
-                    <span class="stats-arrow">→</span>
-                    <span class="stats-value-new">86.7%</span>
-                </div>
-            </div>
+            <img src="images/p1-final-result.png" alt="最终成果" class="detail-image">
         </section>
+
+        <div class="full-width-strip comparison-effect-strip">
+            <div class="container comparison-effect-bar">
+                <span class="stats-label">效果回收：准确率</span>
+                <span class="stats-value-old">79.1%</span>
+                <span class="stats-arrow">→</span>
+                <span class="stats-value-new">86.7%</span>
+            </div>
+        </div>
 
     </main>
 
