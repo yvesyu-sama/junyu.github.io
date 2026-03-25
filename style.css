@@ -929,6 +929,10 @@ nav a.active {
     transition: transform 0.2s;
 }
 
+.content-img.with-shadow {
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.14);
+}
+
 .content-img:hover {
     transform: scale(1.01);
 }
@@ -1007,7 +1011,10 @@ nav a.active {
 
 /* Project Specific Banner */
 .merchant-limit-banner {
-    background: linear-gradient(135deg, #fdba74 0%, #fb923c 100%); /* Warm Orange Gradient */
+    background-image: var(--merchant-banner-cover, none), linear-gradient(135deg, #fdba74 0%, #fb923c 100%);
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
     position: relative;
     overflow: hidden;
     padding: 0;
@@ -1024,10 +1031,14 @@ nav a.active {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
 }
 
 .kol-banner {
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); /* Light Blue Gradient (Blue-50 to Blue-100) */
+    background-image: var(--kol-banner-cover, none), linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
     position: relative;
     overflow: hidden;
     height: 280px;
@@ -1039,11 +1050,12 @@ nav a.active {
 }
 
 .kol-banner .page-title {
-    color: #5482a3; /* Muted Steel Blue */
+    color: #ffffff;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0;
     z-index: 2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
 }
 
 /* Specific Info Card styles for KOL banner */
@@ -1066,6 +1078,10 @@ nav a.active {
 
 .project-comparison-page {
     --comparison-accent: #0f766e;
+}
+
+.bg-comparison-ink-green {
+    background-color: rgba(15, 118, 110, 0.08);
 }
 
 .comparison-banner {
