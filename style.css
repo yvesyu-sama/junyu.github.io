@@ -1336,6 +1336,24 @@ nav a.active {
     background-color: #3b82f6 !important; /* Blue 500 */
 }
 
+.kol-media-card {
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-top: 18px;
+}
+
+.kol-media-card--gray {
+    background-color: #f3f4f6;
+}
+
+.kol-media-card--blue {
+    background-color: #eff6ff;
+}
+
+.kol-media-card .content-img {
+    margin: 0 auto;
+}
+
 /* Indented body text for Review Section */
 .review-body-text {
     text-indent: 1em; /* Indent first line by 1 character */
@@ -1601,6 +1619,21 @@ nav a.active {
     margin-bottom: 18px;
 }
 
+.ux-note {
+    background-color: #f3f4f6;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: var(--text-secondary);
+    margin: 12px 0 18px;
+}
+
+.ux-note-list {
+    margin: 0;
+    padding-left: 18px;
+    line-height: 1.6;
+}
+
 .ux-tag {
     border: 1px solid rgba(148, 163, 184, 0.55);
     color: rgba(100, 116, 139, 0.9);
@@ -1636,6 +1669,13 @@ nav a.active {
     background: transparent;
     cursor: zoom-in;
     border: 0;
+}
+
+.ux-video {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    background-color: #000;
 }
 
 .ux-collection-page .tab-image-container {
